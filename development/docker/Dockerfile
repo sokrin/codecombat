@@ -7,7 +7,7 @@ WORKDIR /coco
 
 ENV PATH $PATH:/root/.rbenv/bin:/root/.rbenv/shims
 RUN apt-get update && \
-    apt-get install -y git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison \
+    apt-get install -y --force-yes git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison \
                        build-essential libyaml-dev libncurses5-dev \
                        libffi-dev libgdbm-dev && \
     curl -sL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-installer | bash -
